@@ -1,0 +1,179 @@
+::-webkit-scrollbar {
+    display: none;
+}
+body {
+  font-family: monospace;
+  margin: 0;
+  display: grid;
+  color: white;
+  background-color: rgb(22, 22, 22);
+  overflow-x: hidden;
+  height: 150vh;
+}
+#blob {
+  position: fixed;
+  margin-top: 200px;
+  width: 20vw; height: 20vw;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    45deg,
+    rgb(22, 22, 22),
+    rgb(195, 0, 255),
+    rgb(0, 255, 242)
+  );
+  filter: blur(30px);
+}
+#blob2 {
+  position: fixed;
+  width: 40vw; height: 40vw;
+  margin-left: 100px; margin-top: 600px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+    90deg,
+    rgb(22, 22, 22),
+    rgb(195, 0, 255),
+    rgb(0, 255, 242)
+  );
+  filter: blur(30px);
+  border-radius: 50%;
+  overflow: hidden;
+}
+#blob3 {
+  position: fixed;
+  margin-top: 300px;
+  right: 30px;
+  width: 25vw; height: 20vw;
+  rotate: -150deg;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+    90deg,
+    rgb(22, 22, 22),
+    rgb(195, 0, 255),
+    rgb(0, 255, 242)
+  );
+  filter: blur(30px);
+  border-radius: 50%;
+}
+.blob{
+  filter: blur(30px);
+  animation: blob 5s infinite;
+}
+@keyframes blob {
+  0% {
+    filter: blur(30px);
+  }
+  50% {
+    filter: blur(50px);
+  }
+  100% {
+    filter: blur(30px);
+  }
+}
+#logo {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20vh;
+}
+
+#logo ul{
+    display: flex;
+    gap:50px;
+    font-size: 25px;
+    list-style: None;
+}
+
+#logo ul li{
+    padding:10px;
+    transition-duration: 2s ;
+    
+}
+
+
+li .line{
+    margin-top:5px;
+    width: 0%;
+    height:2px;
+    background-color: white;
+    transition-duration: 1s;
+    /* animation: border-bot  1s ease; */
+
+}
+
+li a{
+    text-decoration: none;
+    color: white;
+}
+
+li:hover .line{
+    width: 100%;
+    
+}
+
+
+@keyframes border-bot {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+
+
+h1 {
+  position: relative;
+  width: 70vw; height: auto;
+  left: 50%; transform: translateX(-50%);
+  margin-top: 45vh; margin-bottom: 500px;
+  color: white;
+  font-size: 5vw;
+  border: 3px solid white;
+  padding: 20px;
+  border-radius: 1.5rem;
+  text-align: center;
+}
+#main ,#skills{
+  z-index: 100;
+  width: 100%; height: 100vh;
+  background-color: rgb(22,22,22);
+  border-top: 1px solid white;
+  border-radius: 1rem 1rem 0 0;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h2 {
+  font-size: 35px;
+  margin: 20px;
+}
+p {
+    padding: 0 200px;
+  font-size: 20px;
+  margin: 20px;
+  line-height: 40px;
+}
+p::selection{
+    background: #fbff00;
+    color: black;
+}
+
+
+
+#skills .images{
+    padding: 150px;
+    height: 450px;
+    display: flex;
+    gap:100px;
+    flex-wrap: wrap;
+}
+
+.images img{
+    width: 150px;
+    height: 150px;
+}
+
